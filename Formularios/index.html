@@ -11,7 +11,7 @@
     <p>Os formularios permitem aos usuarios fazer a entrada de dados no documento html, A partir destes daods que o usuario insere scripts em linguagem de programação web podem ter acesso e manipular esses dados. Liguagens Front_END como JS, e back_end como PHP,java, phyton entre outras.</p>
 
     <h2>Exemplos:</h2>
-    <p>Criar um formulario para somar dois numeros.</p>
+    <h3>Criar um formulario para somar dois numeros.</h3>
 
     <p>
         <label for="um">Estre com o valor de n1:</label>
@@ -20,11 +20,18 @@
         <label for="dois">Entre com o valor de n2:</label>
         <input type="text" id="segundo">
         <input type="button" value="somar" id="btnsomar" onclick="somar()">
-        <div id="resultado"></div>
+        <div id="resultadoSoma"></div>
     </p>
+        <h3>No mesmo Script usando os mesmos valores de n1 e n2, cri novos botoes para multiplicar, dividir(N pode ser por 0), e subtrair. </h3>
     <p>
-        No mesmo Script
+        <input type="button" value="Multiplicar" id="btnmult" onclick="mult()">
+        <br>
+        <input type="button" value="Dividir" id="btndiv" onclick="div()">
+        <div id="resultadoMult"></div>
+        <div id="resultadoDiv"></div>
     </p>
+
+    <h3>Crie um novo documento html onde o usuario deve entrar o peso e a altura e o programa deve exibir o IMC. Dependendo da faixa do IMC deve informar se esta abaixo do peso, peso normal, sobrepeso e obesidade morbida. <a href="Exemplos/Ex03/index.html">Resolução</a></h3>
 
 </body>
 </html>
