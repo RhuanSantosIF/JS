@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="CSS/Ex01.css">
+</head>
+<body>
+    <h1 id="titulo">Aprendendo DOM:</h1>
+    <p>E uma APM que permite manipularmos o HTML com o JS. O documento HTML é visto como document e tera associado a ele vario metodos.</p>
+    <ol>
+        <li>getElementById: Retorna o elemento que possui o ID especificado.</li>
+        <li>getElementsByClassName: Retorna uma lista de elementos que possuem a classe especificada.</li>
+        <li>getElementsByTagName: Retorna uma lista de elementos que possuem a tag especificada.</li>
+        <li>innerHTML: Permite obter ou definir o conteúdo HTML de um elemento. <input type="button" value="Mudar" onclick="mudarTitulo()"></li>
+        <li>Mudar Estilo: <input type="button" value="Mudarestilo" onclick="mudarEstilo()"></li>
+        <li>classList: Permite adicionar, remover e verificar classes de um elemento. 
+            <ul>
+                <li>.add - adiciona uma classe ao elemento. <input type="button" value="Adicionar Classe" onclick="destacar()"></li>
+                <li>.remove - remove uma classe do elemento. <input type="button" value="Remover Classe" onclick="remover()"></li>
+                <li>.toggle - alterna uma classe do elemento. <input type="button" value="Alternar Classe" onclick="alternar()"></li>
+            </ul>
+        </li>
+        <li>createElement: Cria um novo elemento HTML. <input type="button" value="Adicionar Item" onclick="adicionarTexto()"><input type="button" value="Remover Item" onclick="removerTexto()"><input type="button" value="Remover Tudo" onclick="removerTudo()"></li>
+        <li>querySelector: Retorna o primeiro elemento que corresponde ao seletor CSS especificado. <input type="button" value="Selecionar" onclick="colorir()"></li>
+    </ol>
+    <h2 id="titulo02">Ola mundo!</h2>
+    <div id="container">
+
+    </div>
+    <script src="JS/Ex01.js"></script>
+</body>
+</html>
