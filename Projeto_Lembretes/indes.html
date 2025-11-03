@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Lembretes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Organizador de tarefas:</h1>
+    <label for="textoInicial">Digite seu lembrete:</label>
+    <input type="text" name="Lembrete" id="textoInicial">
+    <br>
+    <label for="checkbox">Urgente</label>
+    <input type="checkbox" id="checkbox">
+    <input type="button" name="Adicionar" id="add" onclick="adicionar()" value="Adicionar lembrete">
+    <hr>
+    <div id="container01">
+        <section class="box" id="box-urgente">
+            <h2>Urgente</h2>
+            <div id="urgente">
+                <ul id="lista-urgente">
+
+                </ul>
+            </div>
+
+            <div class="botoes">
+                <input type="button" name="RemoverUrgente" id="remover-urgente" onclick="removerTextoUrgente()"
+                    value="Remover lembrete">
+                <input type="button" name="LimparUrgente" id="limpar-urgente" onclick="removerTudoUrgente()"
+                    value="Limpar lembretes">
+            </div>
+        </section>
+
+        <section class="box" id="box-nurgente">
+            <h2>Não urgente</h2>
+            <div id="Nurgente">
+                <ul id="lista-nurgente">
+
+                </ul>
+            </div>
+
+            <div class="botoes">
+                <input type="button" name="RemoverNurgente" id="remover-nurgente" onclick="removerTextoNUrgente()"
+                    value="Remover lembrete">
+                <input type="button" name="LimparNurgente" id="limpar-nurgente" onclick="removerTudoNUrgente()"
+                    value="Limpar lembretes">
+            </div>
+        </section>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
