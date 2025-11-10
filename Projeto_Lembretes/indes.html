@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -9,48 +9,55 @@
 </head>
 
 <body>
-    <h1>Organizador de tarefas:</h1>
-    <label for="textoInicial">Digite seu lembrete:</label>
-    <input type="text" name="Lembrete" id="textoInicial">
-    <br>
-    <label for="checkbox">Urgente</label>
-    <input type="checkbox" id="checkbox">
-    <input type="button" name="Adicionar" id="add" onclick="adicionar()" value="Adicionar lembrete">
-    <hr>
-    <div id="container01">
-        <section class="box" id="box-urgente">
-            <h2>Urgente</h2>
-            <div id="urgente">
-                <ul id="lista-urgente">
+    <header>
+        <h1>📝 Organizador de Tarefas</h1>
+        <p>Mantenha seus lembretes organizados e nunca mais se esqueça de nada!</p>
+    </header>
 
-                </ul>
-            </div>
+    <main>
+        <section id="formulario">
+            <label for="textoInicial">Digite seu lembrete:</label>
+            <input type="text" id="textoInicial" placeholder="Ex: Pagar contas, enviar email..." />
 
-            <div class="botoes">
-                <input type="button" name="RemoverUrgente" id="remover-urgente" onclick="removerTextoUrgente()"
-                    value="Remover lembrete">
-                <input type="button" name="LimparUrgente" id="limpar-urgente" onclick="removerTudoUrgente()"
-                    value="Limpar lembretes">
+            <div class="opcoes">
+                <label for="checkbox" class="check-label">
+                    <input type="checkbox" id="checkbox"> Urgente
+                </label>
+                <button id="add" onclick="adicionar()">➕ Adicionar lembrete</button>
             </div>
         </section>
 
-        <section class="box" id="box-nurgente">
-            <h2>Não urgente</h2>
-            <div id="Nurgente">
-                <ul id="lista-nurgente">
+        <hr>
 
-                </ul>
-            </div>
+        <div id="container01">
+            <section class="box" id="box-urgente">
+                <h2>🔥 Urgente</h2>
+                <div id="urgente">
+                    <ul id="lista-urgente"></ul>
+                </div>
+                <div class="botoes">
+                    <button onclick="removerTextoUrgente()">🗑️ Remover</button>
+                    <button onclick="removerTudoUrgente()">🧹 Limpar tudo</button>
+                </div>
+            </section>
 
-            <div class="botoes">
-                <input type="button" name="RemoverNurgente" id="remover-nurgente" onclick="removerTextoNUrgente()"
-                    value="Remover lembrete">
-                <input type="button" name="LimparNurgente" id="limpar-nurgente" onclick="removerTudoNUrgente()"
-                    value="Limpar lembretes">
-            </div>
-        </section>
+            <section class="box" id="box-nurgente">
+                <h2>🕓 Não urgente</h2>
+                <div id="Nurgente">
+                    <ul id="lista-nurgente"></ul>
+                </div>
+                <div class="botoes">
+                    <button onclick="removerTextoNUrgente()">🗑️ Remover</button>
+                    <button onclick="removerTudoNUrgente()">🧹 Limpar tudo</button>
+                </div>
+            </section>
+        </div>
+    </main>
 
-    </div>
+    <footer>
+        <p>Feito com ❤️ por Você</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 

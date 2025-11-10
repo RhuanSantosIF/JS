@@ -1,4 +1,7 @@
 contagem = 1
+contagem2 = 1
+subcontagem = 1
+subcontagem2 = 1
 function adicionar() {
     var texto = document.getElementById("textoInicial").value;
     var checkbox = document.getElementById("checkbox").checked;
@@ -12,16 +15,27 @@ function adicionar() {
         container.appendChild(criar);
         if (contagem == 1) {
             criar.style.color = "blue"
+            subcontagem = contagem
             contagem++
         }
         else {
             if (contagem == 2) {
                 criar.style.color = "green"
+                subcontagem = contagem
                 contagem++
             }
             else {
-                criar.style.color = "purple"
-                contagem = 1
+                if (contagem == 3) {
+                    criar.style.color = "purple"
+                    subcontagem = contagem2
+                    contagem = 1
+                }
+                else {
+                    criar.style.color = "blue"
+                    contagem = 2
+                    subcontagem = 1
+                }
+
             }
         }
     }
@@ -32,53 +46,76 @@ function adicionar() {
         criar.className = "notaUrgente"
         var container = document.getElementById("lista-urgente");
         container.appendChild(criar);
-        if (contagem == 1) {
+        if (contagem2 == 1) {
             criar.style.color = "blue"
-            contagem++
+            subcontagem2 = contagem2
+            contagem2++
         }
         else {
-            if (contagem == 2) {
+            if (contagem2 == 2) {
                 criar.style.color = "green"
-                contagem++
+                subcontagem2 = contagem2
+                contagem2++
             }
             else {
-                criar.style.color = "purple"
-                contagem = 1
+                if (contagem2 == 3) {
+                    criar.style.color = "purple"
+                    subcontagem2 = contagem2
+                    contagem2 = 1
+                }
+                else {
+                    criar.style.color = "blue"
+                    contagem = 2
+                    subcontagem = 1
+                }
+
             }
         }
     }
 }
-function removerTextoUrgente() {
-    var elemento = document.getElementById("notaUrgente");
+    function removerTextoUrgente() {
+        var elemento = document.getElementById("lista-urgente").lastChild
 
-    if (elemento) {
-        elemento.remove();
-    }
-    else {
-        alert("Não existe parágrafo para remover")
-    }
+        if (elemento) {
+            elemento.remove()
+            contagem2 = subcontagem2
+            subcontagem2 = contagem2 - 1
+        }
+        else {
+            alert("Não existe parágrafo para remover")
+        }
 
-}
-function removerTextoNUrgente() {
-    var elemento = document.getElementById("notaNUrgente");
+    }
+    function removerTextoNUrgente() {
+        var elemento = document.getElementById("lista-nurgente").lastChild
 
-    if (elemento) {
-        elemento.remove()
+        if (elemento) {
+            elemento.remove()
+            contagem = subcontagem
+            if (contagem < 1) {
+                contagem = 3
+            }
+            subcontagem= contagem-1
+            contagem= contagem -1
+        }
+        else {
+            alert("Não existe parágrafo para remover")
+        }
     }
-    else {
-        alert("Não existe parágrafo para remover")
+    function removerTudoUrgente() {
+        var element = document.getElementsByClassName("notaUrgente");
+        while (element.length > 0) {
+            element[0].length.remove()
+        }
+        contagem2 = 1
+        subcontagem2 = 1
     }
-}
-function removerTudoUrgente() {
-    var element = document.getElementsByClassName("notaUrgente");
-    while (element.length > 0) {
-        element[0].remove()
+    function removerTudoNUrgente() {
+        var element = document.getElementsByClassName("notaNUrgente");
+        while (element.length > 0) {
+            element[0].remove()
+        }
+        contagem = 1
+        subcontagem = 1
     }
-}
-function removerTudoNUrgente() {
-    var element = document.getElementsByClassName("notaNUrgente");
-    while (element.length > 0) {
-        element[0].remove()
-    }
-}
 

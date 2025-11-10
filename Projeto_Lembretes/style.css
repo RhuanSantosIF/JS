@@ -1,69 +1,161 @@
+/* ====== RESET E BASE ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+/* ====== CABEÇALHO ====== */
+header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+header h1 {
+    color: #2d2d2d;
+    font-size: 2rem;
+}
+
+header p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* ====== FORMULÁRIO ====== */
+#formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+#textoInicial {
+    width: 100%;
+    max-width: 420px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.opcoes {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.check-label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+}
+
+/* ====== BOTÕES ====== */
+button, input[type="button"] {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background: #0078ff;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover, input[type="button"]:hover {
+    background: #005fd1;
+    transform: scale(1.03);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* ====== CONTAINER ====== */
 #container01 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
     max-width: 900px;
-    margin: 16px auto;
-    padding: 8px;
+    margin: 0 auto;
+}
+
+/* ====== BOXES ====== */
+#box-urgente {
+    background: #ff6b6b;
+    border: 1px solid #e23e3e;
+    color: white;
 }
 
 #box-nurgente {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 12px;
-    background: #c1e65e;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    min-height: 160px;
+    background: #a8e063;
+    border: 1px solid #80c23b;
+    color: #2f3d1e;
 }
 
-#box-urgente {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 12px;
-    background: #f1533f;
+.box {
+    border-radius: 10px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    min-height: 160px;
+    gap: 10px;
+    min-height: 200px;
 }
 
 .box h2 {
-    margin: 0;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
-#urgente,
-#Nurgente {
+/* ====== LISTAS ====== */
+#urgente, #Nurgente {
     flex: 1 1 auto;
-    padding: 8px;
     background: #fff;
-    border: 1px dashed #ddd;
+    padding: 10px;
     border-radius: 6px;
     overflow-y: auto;
+    border: 1px dashed #ccc;
 }
 
+ul {
+    list-style-type: disc;
+    padding-left: 18px;
+}
+
+ul li {
+    margin: 6px 0;
+}
+
+/* ====== BOTÕES INTERNOS ====== */
 .botoes {
     display: flex;
-    gap: 8px;
     justify-content: flex-end;
+    gap: 8px;
 }
 
-input[type="button"] {
-    padding: 6px 10px;
-    border-radius: 4px;
-    border: 1px solid #bbb;
-    background: #eee;
-    cursor: pointer;
+/* ====== RODAPÉ ====== */
+footer {
+    text-align: center;
+    margin-top: 32px;
+    color: #777;
 }
 
-input[type="button"]:hover {
-    background: #e0e0e0;
-}
-
-@media (max-width: 600px) {
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 700px) {
     #container01 {
         grid-template-columns: 1fr;
+    }
+
+    #formulario {
+        width: 100%;
     }
 }
