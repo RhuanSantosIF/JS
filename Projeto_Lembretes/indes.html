@@ -10,20 +10,20 @@
 
 <body>
     <header>
-        <h1>📝 Organizador de Tarefas</h1>
+        <h1>Organizador de Tarefas</h1>
         <p>Mantenha seus lembretes organizados e nunca mais se esqueça de nada!</p>
     </header>
 
     <main>
         <section id="formulario">
             <label for="textoInicial">Digite seu lembrete:</label>
-            <input type="text" id="textoInicial" placeholder="Ex: Pagar contas, enviar email..." />
+            <input type="text" id="textoInicial"/>
 
             <div class="opcoes">
                 <label for="checkbox" class="check-label">
                     <input type="checkbox" id="checkbox"> Urgente
                 </label>
-                <button id="add" onclick="adicionar()">➕ Adicionar lembrete</button>
+                <button id="add" onclick="adicionar()">Adicionar lembrete</button>
             </div>
         </section>
 
@@ -31,33 +31,28 @@
 
         <div id="container01">
             <section class="box" id="box-urgente">
-                <h2>🔥 Urgente</h2>
+                <h2>Urgente</h2>
                 <div id="urgente">
                     <ul id="lista-urgente"></ul>
                 </div>
                 <div class="botoes">
-                    <button onclick="removerTextoUrgente()">🗑️ Remover</button>
-                    <button onclick="removerTudoUrgente()">🧹 Limpar tudo</button>
+                    <input type="button" onclick="removerTextoUrgente()" id="removerTextoUrgente" value="Remover">
+                    <input type="button" onclick="removerTudoUrgente()" id="removerTudoUrgente" value="Limpar">
                 </div>
             </section>
 
             <section class="box" id="box-nurgente">
-                <h2>🕓 Não urgente</h2>
+                <h2>Não urgente</h2>
                 <div id="Nurgente">
                     <ul id="lista-nurgente"></ul>
                 </div>
                 <div class="botoes">
-                    <button onclick="removerTextoNUrgente()">🗑️ Remover</button>
-                    <button onclick="removerTudoNUrgente()">🧹 Limpar tudo</button>
+                    <input type="button" onclick="removerTextoNUrgente()" id="removerTextoNUrgente" value="Remover"> 
+                    <input type="button" onclick="removerTudoNUrgente()" id="removerTudoNUrgente" value="Limpar">
                 </div>
             </section>
         </div>
     </main>
-
-    <footer>
-        <p>Feito com ❤️ por Você</p>
-    </footer>
-
     <script src="script.js"></script>
 </body>
 
