@@ -13,22 +13,22 @@ function adicionar() {
         var container = document.getElementById("lista-nurgente");
         container.appendChild(criar);
         if (contagem === 1) {
-            cor = "blue"
+            cor1 = "blue"
             contagem++
         }
         else {
             if (contagem === 2) {
-                cor = "green"
+                cor1 = "green"
                 contagem++
             }
             else {
                 if (contagem === 3) {
-                    cor = "purple"
+                    cor1 = "purple"
                     contagem = 1
                 }
             }
         }
-        criar.style.color=cor
+        criar.style.color=cor1
     }
     else {
         var criar = document.createElement("li");
