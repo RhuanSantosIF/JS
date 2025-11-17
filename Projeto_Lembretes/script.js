@@ -4,7 +4,13 @@ var cor1, cor2
 function adicionar() {
     var texto = document.getElementById("textoInicial").value;
     var checkbox = document.getElementById("checkbox").checked;
+    document.getElementById("textoInicial").value = ""
 
+    if (texto === "") {
+        alert("Por favor, insira um texto válido.");
+        return;
+    }
+    else{
     if (checkbox == false) {
         var criar = document.createElement("li");
         criar.innerText = texto
@@ -28,7 +34,7 @@ function adicionar() {
                 }
             }
         }
-        criar.style.color=cor1
+        criar.style.color = cor1
     }
     else {
         var criar = document.createElement("li");
@@ -53,27 +59,28 @@ function adicionar() {
                 }
             }
         }
-        criar.style.color=cor2
+        criar.style.color = cor2
     }
+}
 }
 function removerTextoUrgente() {
     var elemento = document.getElementById("lista-urgente").lastChild
 
     if (elemento) {
         cor2 = document.getElementById("lista-urgente").lastChild.style.color
-        if(cor2 === "blue"){
-            contagem2=1
+        if (cor2 === "blue") {
+            contagem2 = 1
         }
-        else{
-            if(cor2 ==="green"){
-                contagem2=2
+        else {
+            if (cor2 === "green") {
+                contagem2 = 2
             }
-            else{
-                if(cor2 ==="purple"){
-                    contagem2=3
+            else {
+                if (cor2 === "purple") {
+                    contagem2 = 3
                 }
             }
-        } 
+        }
         elemento.remove()
     }
     else {
@@ -86,19 +93,19 @@ function removerTextoNUrgente() {
 
     if (elemento) {
         cor1 = document.getElementById("lista-nurgente").lastChild.style.color
-        if(cor1 === "blue"){
-            contagem=1
+        if (cor1 === "blue") {
+            contagem = 1
         }
-        else{
-            if(cor1 ==="green"){
-                contagem=2
+        else {
+            if (cor1 === "green") {
+                contagem = 2
             }
-            else{
-                if(cor1 ==="purple"){
-                    contagem=3
+            else {
+                if (cor1 === "purple") {
+                    contagem = 3
                 }
             }
-        }      
+        }
         elemento.remove()
     }
     else {
