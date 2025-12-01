@@ -1,4 +1,4 @@
-var salarioFinal = 0;
+var salarioFinal = localStorage.getItem("salario")
 
 
 function AdicionarSalario() {
@@ -15,6 +15,7 @@ function AdicionarSalario() {
             document.getElementById("resumo-Salario").appendChild(criar);
             salarioFinal = salario;
             document.getElementById("txt-Salario").value = "";
+            localStorage.setItem("salario", salarioFinal);
         }
     }
     else {
@@ -23,5 +24,8 @@ function AdicionarSalario() {
 }
 
 function AdicionarDespesas(){
-    var despesa = [parseFloat(document.getElementById("txt-Despesas-nome").value)];
+    var despesa = [document.getElementById("txt-Despesas-nome").value,parseFloat(document.getElementById("txt-Despesas-valor").value),document.getElementById("txt-Despesas-data").value];
+    if(despesa[0]==="" || despesa[1]==="" || despesa[1]===0 || despesa[2]===""){
+        alert("Por favor, preencha todos os campos de despesa com valores válidos.");
+    }
 }
