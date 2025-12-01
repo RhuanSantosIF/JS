@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Pessoal de Finanças</title>
+</head>
+<body>
+    <h1>Controle Pessoal de Finanças</h1>
+    <div id="container-Cadastro">
+        <div id="container-Salario">
+            <h3>Salário</h3>
+            <input type="text" id="txt-Salario" placeholder="Digite seu salário">
+            <input type="button" value="Adicionar" id="bt-Adicionar" onclick="AdicionarSalario()">
+        </div>
+        <div id="container-Despesas">
+            <h3>Despesas</h3>
+            <input type="text" id="txt-Despesas-nome" placeholder="Digite o Nome da Despesa">
+            <input type="text" id="txt-Despesas-data" placeholder="Digite a Data da Despesa">
+            <input type="text" id="txt-Despesas-valor" placeholder="Digite o Valor da Despesa">
+            <input type="button" value="Adicionar" id="bt-Adicionar-Despesas" onclick="AdicionarDespesas()">
+        </div>
+    </div>
+
+    <div id="container-Lista">
+        <h2>Lista de Despesas</h2>
+        <ul id="lista-Despesas">      </ul>
+    </div>
+
+    <div id="container-Resumo">
+        <h2>Resumo Financeiro</h2>
+        <div id="resumo-Salario">
+            <h3>Salário Total R$:</h3>
+        </div>
+        <div id="resumo-Despesas">
+            <h3>Despesas Totais R$:</h3>
+            <ul id="lista-Despesas-Resumo"></ul>
+        </div>
+        <div id="resumo-Saldo">
+            <h3>Saldo Final R$:</h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
