@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylr.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle Pessoal de Finanças</title>
 </head>
+
 <body>
     <h1>Controle Pessoal de Finanças</h1>
     <div id="container-Cadastro">
@@ -25,14 +27,18 @@
 
     <div id="container-Lista">
         <h2>Lista de Despesas</h2>
-        <ul id="lista-Despesas">      </ul>
+        <ul id="lista-Despesas"> </ul>
+        <input type="button" value="Remover Última Despesa" id="bt-remover-despesa" onclick="removerUltimaDespesa()">
     </div>
 
     <div id="container-Resumo">
         <h2>Resumo Financeiro</h2>
         <div id="resumo-Salario">
             <h3>Salário Total R$:</h3>
+            <ul id="lista-Salario"></ul>
+            <input type="button" value="Remover Salário" id="bt-remover-salario" onclick="removerSalario()">
         </div>
+
         <div id="resumo-Despesas">
             <h3>Despesas Totais R$:</h3>
             <ul id="lista-Despesas-Resumo"></ul>
@@ -43,4 +49,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
