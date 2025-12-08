@@ -167,4 +167,3 @@ window.addEventListener("load", function () {//recarrega os dados ao carregar a 
     carregarSalario();
     carregarDespesas();
 });
-
